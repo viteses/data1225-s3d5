@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_data_circle
+    tables:
+      - name: parcel
+        identifier: raw_cc_parcel
+        description: info about order shipments
+        columns:
+          - name: parcel_id
+            description: id of the shipped parcel
+            tests:
+              - not_null
+      - name: product
+        identifier: raw_cc_parcel_product
+        description: product inside of the parcel
+        columns:
+          - name: ParCEL_id
+            description: id of the shipped parcel
+            tests:
+              - not_null

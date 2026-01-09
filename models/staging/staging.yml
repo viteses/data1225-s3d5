@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_parcel
+    columns:
+      - name: parcel_id
+        tests:
+          - not_null
+  - name: stg_product
